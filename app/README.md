@@ -11,7 +11,7 @@ To support Servlet 3.x deployment modes and asynchronous JAX-RS resource program
 3. `org.glassfish.jersey.media:jersey-media-json-jackson:3.0.0`  
 To support POJO/JSON serialization.
 
-4. `org.glassfish.jersey.inject:jersey-cdi2-se:3.0.0`  
+4. `org.glassfish.jersey.inject:jersey-hk2:3.0.0`  
 Jersey must work with one of the DI framework - HK2 / CDI, else it will hit the error as below:
     ```
     root cause java.lang.IllegalStateException: InjectionManagerFactory not found.
@@ -22,6 +22,12 @@ JAXB implementation was removed from Java SE since JDK 9, thus JAXB implementati
     ```
     Implementation of JAXB-API has not been found on module path or classpath.
     ```
+   
+6. `com.h2database:h2:1.3.148`  
+Embedded database.
+
+7. `com.zaxxer:HikariCP:3.4.5`  
+Connection pool used to access h2 database.
    
 ## Note
 Jersey 3.0 is "jakarta-fied", which the package is now `jakarta.` instead of `javax.`
