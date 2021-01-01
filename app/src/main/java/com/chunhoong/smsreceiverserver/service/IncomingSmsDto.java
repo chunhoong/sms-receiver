@@ -1,6 +1,6 @@
-package com.chunhoong.smsreceiverserver;
+package com.chunhoong.smsreceiverserver.service;
 
-public class IncomingSmsRequest {
+public class IncomingSmsDto {
 
     private String content;
     private String sender;
@@ -20,13 +20,4 @@ public class IncomingSmsRequest {
     public void setSender(String sender) {
         this.sender = sender;
     }
-
-    @Override
-    public String toString() {
-        return "IncomingSms{" +
-                "content='" + content + '\'' +
-                ", sender='" + sender + '\'' +
-                '}';
-    }
-
 }

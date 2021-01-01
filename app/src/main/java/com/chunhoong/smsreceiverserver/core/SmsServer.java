@@ -1,4 +1,4 @@
-package com.chunhoong.smsreceiverserver;
+package com.chunhoong.smsreceiverserver.core;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;

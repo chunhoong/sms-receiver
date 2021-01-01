@@ -1,4 +1,4 @@
-package com.chunhoong.smsreceiverserver;
+package com.chunhoong.smsreceiverserver.core;
 
 public class App {
 
