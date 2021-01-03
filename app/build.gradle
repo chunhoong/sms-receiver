@@ -7,6 +7,8 @@ repositories {
     jcenter()
 }
 
+mainClassName = 'com.chunhoong.smsreceiverserver.core.App'
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
@@ -30,7 +32,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'com.chunhoong.smsreceiverserver.core.App'
+    mainClass = mainClassName
 }
 
 tasks.named('test') {
