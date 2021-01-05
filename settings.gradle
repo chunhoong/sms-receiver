@@ -8,6 +8,6 @@
  */
 
 rootProject.name = 'sms-receiver'
-include('lib')
+include('sms-receiver-lib')
 include('sample-app')
 

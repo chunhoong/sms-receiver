@@ -9,6 +9,6 @@ public class SampleApplication {
 
     public static void main(String[] args) {
         SmsReceiver.addListener(sms -> logger.info("From listener: {}", sms));
-        SmsReceiver.start();
+        SmsReceiver.start(5);
     }
 }
