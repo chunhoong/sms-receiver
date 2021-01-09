@@ -26,8 +26,11 @@ implementation 'com.chunhoong:sms-receiver-lib:1.0.0'
 
 ### Start receiver
 ```java
+// Obtain com port number as shown in: https://raw.githubusercontent.com/chunhoong/sms-receiver/master/doc/screenshot.png
+int comPortNumber = 5;
+
 // Start sms receiver
-SmsReceiver.start();
+SmsReceiver.start(comPortNumber);
 ```
 
 
