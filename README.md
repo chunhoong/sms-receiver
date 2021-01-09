@@ -14,14 +14,14 @@ If you are on Maven, add this to `pom.xml`
 <dependency>
   <groupId>com.chunhoong</groupId>
   <artifactId>sms-receiver-lib</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 
 If you are on Gradle, add this to `build.gradle`
 ```groovy
-implementation 'com.chunhoong:sms-receiver-lib:1.0.0'
+implementation 'com.chunhoong:sms-receiver-lib:1.0.1'
 ```
 
 ### Start receiver
@@ -72,7 +72,7 @@ SmsReceiver.stop();
 
 ## Credits
 - [Thanasis Delenikas](https://github.com/tdelenikas) for SMSLib
-- [Neuron Robotics](https://github.com/NeuronRobotics) for its nrjavaserial.
+- [Neuron Robotics](https://github.com/NeuronRobotics) for nrjavaserial.
 
 ## License
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)

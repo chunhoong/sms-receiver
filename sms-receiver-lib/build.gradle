@@ -13,7 +13,7 @@ repositories {
 }
 
 group 'com.chunhoong'
-version '1.0.0'
+version '1.0.1'
 
 dependencies {
     testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
@@ -30,6 +30,28 @@ publishing {
     publications {
         shadow(MavenPublication) { publication ->
             project.shadow.component(publication)
+            pom {
+                name = 'SMS Receiver'
+                description = 'Library to read sms from JVM application.'
+                licenses {
+                    license {
+                        name = 'The Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'chunhoong'
+                        name = 'Lim Chun Hoong'
+                        email = 'chunhoong.lim@outlook.my'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/chunhoong/sms-receiver.git'
+                    developerConnection = 'scm:git:git@github.com:chunhoong/sms-receiver.git'
+                    url = 'https://github.com/chunhoong/sms-receiver'
+                }
+            }
         }
     }
 }
@@ -40,7 +62,7 @@ bintray {
     publications = ['shadow']
     pkg {
         repo = 'oss'
-        name = 'sms-receiver'
+        name = 'sms-receiver-lib'
         licenses = ['Apache-2.0']
         vcsUrl = 'https://github.com/chunhoong/sms-receiver.git'
     }
