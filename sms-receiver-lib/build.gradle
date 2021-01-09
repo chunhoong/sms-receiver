@@ -33,32 +33,35 @@ dependencies {
 
 publishing {
     publications {
-        shadow(MavenPublication) { publication ->
-            project.shadow.component(publication)
-            artifact sourcesJar
-            artifact javadocJar
-            pom {
-                name = 'SMS Receiver'
-                description = 'Library to read sms from JVM application.'
-                licenses {
-                    license {
-                        name = 'The Apache License, Version 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+        shadow(MavenPublication) {
+            publication ->
+                project.shadow.component(publication)
+
+                artifact sourcesJar
+                artifact javadocJar
+
+                pom {
+                    name = 'SMS Receiver'
+                    description = 'Library to read sms from JVM application.'
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'chunhoong'
+                            name = 'Lim Chun Hoong'
+                            email = 'chunhoong.lim@outlook.my'
+                        }
+                    }
+                    scm {
+                        connection = 'scm:git:https://github.com/chunhoong/sms-receiver.git'
+                        developerConnection = 'scm:git:git@github.com:chunhoong/sms-receiver.git'
+                        url = 'https://github.com/chunhoong/sms-receiver'
                     }
                 }
-                developers {
-                    developer {
-                        id = 'chunhoong'
-                        name = 'Lim Chun Hoong'
-                        email = 'chunhoong.lim@outlook.my'
-                    }
-                }
-                scm {
-                    connection = 'scm:git:https://github.com/chunhoong/sms-receiver.git'
-                    developerConnection = 'scm:git:git@github.com:chunhoong/sms-receiver.git'
-                    url = 'https://github.com/chunhoong/sms-receiver'
-                }
-            }
         }
     }
 }
