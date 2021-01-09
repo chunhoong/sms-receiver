@@ -14,14 +14,14 @@ If you are on Maven, add this to `pom.xml`
 <dependency>
   <groupId>com.chunhoong</groupId>
   <artifactId>sms-receiver-lib</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
 
 If you are on Gradle, add this to `build.gradle`
 ```groovy
-implementation 'com.chunhoong:sms-receiver-lib:1.0.1'
+implementation 'com.chunhoong:sms-receiver-lib:1.0.2'
 ```
 
 ### Start receiver

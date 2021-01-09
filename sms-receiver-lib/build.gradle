@@ -13,7 +13,12 @@ repositories {
 }
 
 group 'com.chunhoong'
-version '1.0.1'
+version '1.0.2'
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
 
 dependencies {
     testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
@@ -30,6 +35,8 @@ publishing {
     publications {
         shadow(MavenPublication) { publication ->
             project.shadow.component(publication)
+            artifact sourcesJar
+            artifact javadocJar
             pom {
                 name = 'SMS Receiver'
                 description = 'Library to read sms from JVM application.'
