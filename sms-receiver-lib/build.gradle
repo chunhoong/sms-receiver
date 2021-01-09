@@ -1,6 +1,8 @@
 plugins {
     id 'java-library'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.8.5'
 }
 
 repositories {
@@ -10,7 +12,8 @@ repositories {
     }
 }
 
-version '1.0.0-SNAPSHOT'
+group 'com.chunhoong'
+version '1.0.0'
 
 dependencies {
     testImplementation 'org.powermock:powermock-module-junit4:2.0.9'
@@ -21,4 +24,24 @@ dependencies {
 
     implementation name: 'smslib-3.5.5'
     implementation 'com.neuronrobotics:nrjavaserial:5.2.1'
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) { publication ->
+            project.shadow.component(publication)
+        }
+    }
+}
+
+bintray {
+    user = project.property('bintray.user')
+    key = project.property('bintray.key')
+    publications = ['shadow']
+    pkg {
+        repo = 'oss'
+        name = 'sms-receiver'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/chunhoong/sms-receiver.git'
+    }
 }

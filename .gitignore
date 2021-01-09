@@ -7,3 +7,5 @@ build
 # Ignore IntelliJ idea specific files / folders
 .idea
 *.iml
+
+gradle.properties
