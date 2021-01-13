@@ -1,4 +1,6 @@
 # SMS Receiver
+[![javadoc](https://javadoc.io/badge2/com.chunhoong/sms-receiver-lib/javadoc.svg)](https://javadoc.io/doc/com.chunhoong/sms-receiver-lib)
+
 SMS Receiver is a library built on top of the deprecated [SMSLib V3.5.x](https://github.com/tdelenikas/smslib-v3) to read SMS from 3G USB modem.
 
 ## Motivation
